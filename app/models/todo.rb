@@ -6,4 +6,8 @@ class Todo < ApplicationRecord
   def completed!
     update_attributes(:completed_at => Time.current)
   end
+
+  def incompleted!
+    update_attributes :completed_at => nil
+  end
 end
